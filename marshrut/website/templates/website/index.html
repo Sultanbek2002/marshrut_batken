@@ -1,10 +1,279 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Microbe&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Marker+Hatch&family=Rubik+Microbe&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="homeworkBootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
-<body>
-<div>Hello world</div>
+<body id="index">
+<div id="main_div">
+    <nav class="navbar navbar-expand-sm bg-info navbar-primary">
+        <div class="container-fluid">
+            <label class="navbar-brand">Бела <img src="https://pngimg.com/uploads/snowflakes/snowflakes_PNG7548.png"
+                                                  width="30px" height="30px"> </label>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item"><a class="nav-link" href="{% url 'home' %}">Главная</a></li>
+                    <li class="navbar-item"><a class="nav-link" href=" {% url 'about' %} ">О нас</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="contactus.html">Контакт</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="productsdescription.html">Продукты</a></li>
+                    <li class="navbar-item"><a class="nav-link" href="basket.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <span class="badge position-absolute bg-danger rounded-pill" id="badge"></span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form class="mt-5">
+        <fieldset id="index_Form">
+            <legend>
+                <h1>Почему мы
+
+                </h1>
+            </legend>
+            <table>
+                <tr>
+                    <th>Лучшие зимние одежды</th>
+                    <th>Турецкое качество</th>
+                    <th>Много скидок и <img
+                            src="https://www.pngplay.com/wp-content/uploads/5/Merry-Christmas-Tree-PNG.png" width="15px"
+                            height="20px"> акции
+                    </th>
+                </tr>
+                <tr>
+                    <td>Bask<br>
+                        Red Fox<br>
+                        Sivera<br>
+                        FINN FLARE<br>
+                    </td>
+                    <td>
+                        Mavi<br>
+                        LC Waikiki<br>
+                        Koton<br>
+                        Yargıcı
+                    </td>
+                    <td>
+                        Bask (
+                        <del>7500</del>
+                        ) 6700 <u>сом</u><br>
+                        Red Fox (
+                        <del>9000</del>
+                        ) 8000 <u>сом</u><br>
+                        Sivera (
+                        <del>6000</del>
+                        ) 5500 <u>сом</u><br>
+                        FINN FLARE (
+                        <del>7700</del>
+                        ) 7000 <u>сом</u><br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <div class="items">
+        {% for cloth in data %}
+        <div>
+
+            <img src="{{ cloth.photo.url }}">
+            <h2>{{cloth.name }}</h2>
+            <p>{{ cloth.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <!--tabs item-->
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <ul class="nav   nav-tabs mt-3" role="tablist" style="display:block">
+                    <li class="nav-item"><a href="#Jackets" class="nav-link display-4  text-danger active"
+                                            data-bs-toggle="tab">Куртки</a>
+                    </li>
+                    <li class="nav-item"><a href="#Boots" class="nav-link display-4 text-danger" data-bs-toggle="tab">Сапоги</a>
+                    </li>
+                    <li class="nav-item"><a href="#Hats" class="nav-link display-4 text-danger" data-bs-toggle="tab">Шапки</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <div class=" d-flex flex-row justify-content-center">
+                    <div class="tab-content ">
+                        <table class=" indexTable table table-striped text-primary tab-pane active" id="Jackets">
+                            <tr class="table-primary">
+                                <th>Фото одежды</th>
+                                <th>Название одежды</th>
+                                <th>Размеры</th>
+                                <th>Цена</th>
+                                <th>На корзину</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <td><img
+                                        src="https://cdn.shopify.com/s/files/1/0421/5518/0184/products/enara-ls-shirt-blue-denim-555597_400x.webp?v=1661323689">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input" value="Finger Nouse"
+                                           onclick="toBasket(this)"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://www.freepngimg.com/thumb/jacket/20-orange-jacket-png-image-thumb.png">
+                                </td>
+                                <td>Finger Black</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input" value="Finger Black"
+                                           onclick="toBasket(this)"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://cdn.shopify.com/s/files/1/1553/2507/products/s_5044_622UzRF5DHpb8p7pBjtTKWgBZDxa3GPurple_large.png?v=1478712185">
+                                </td>
+                                <td>Finger Red</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input" value="Finger Red"
+                                           onclick="toBasket(this)"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://cdn.shopify.com/s/files/1/0357/1843/0764/products/SNOWBAG_Mocca_Checkers_20_580x.png?v=1661265363">
+                                </td>
+                                <td>Finger Blue</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input" value="Finger Blue"
+                                           onclick="toBasket(this)"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--boots tab-->
+
+                        <table class="indexTable table table-striped text-primary tab-pane fade" id="Boots">
+                            <tr class="table-primary">
+                                <th>Фото одежды</th>
+                                <th>Название одежды</th>
+                                <th>Размеры</th>
+                                <th>Цена</th>
+                                <th>На корзину</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <td><img
+                                        src="https://assets.stickpng.com/images/580b57fbd9996e24bc43beda.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://www.pngmart.com/files/22/Boots-PNG-Transparent.png"></td>
+                                <td>Jacket yellow</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input" onclick="toBasket(this)"
+                                           value="Jacket yellow"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://pics.clipartpng.com/Brown_Male_Boots_PNG_Clipart-556.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://www.pngall.com/wp-content/uploads/2016/05/Boot-Free-Download-PNG.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <!--Hats tab-->
+
+                        <table class=" indexTable table table-striped text-primary tab-pane fade" id="Hats">
+                            <tr class="table-primary">
+                                <th>Фото одежды</th>
+                                <th>Название одежды</th>
+                                <th>Размеры</th>
+                                <th>Цена</th>
+                                <th>На корзину</th>
+                            </tr>
+                            <tbody>
+                            <tr>
+                                <td><img
+                                        src="https://rds-shop.ru/assets/components/phpthumbof/cache/rds-2813-koya.1de0e9e7934fe37a2e9da0fc22fc7dfb.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://rds-shop.ru/assets/components/phpthumbof/cache/erugiutfhr.b59028037fcb13a8920abdcc6d1cd135.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://rds-shop.ru/assets/components/phpthumbof/cache/rds-2865vau.4f52da82a1199f4c84b90e1a375aa762.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            <tr>
+                                <td><img
+                                        src="https://camotec.ua/uploads/1216161920.png">
+                                </td>
+                                <td>Finger Nose</td>
+                                <td>Xl,48,47</td>
+                                <td>2300 сом</td>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--tabs end-->
+        <!--ContentsTab-->
+
+
+    </div>
+</div>
+
 </body>
 </html>
