@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="homeworkBootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Продукты</title>
+</head>
+<body class="product">
+<nav class="navbar navbar-expand-sm bg-info navbar-primary">
+    <div class="container-fluid">
+        <label class="navbar-brand">Бела <img src="https://pngimg.com/uploads/snowflakes/snowflakes_PNG7548.png"
+                                              width="30px" height="30px"> </label>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="navbar-item"><a class="nav-link" href="aboutus.html">О нас</a></li>
+                <li class="navbar-item"><a class="nav-link" href="contactus.html">Контакт</a></li>
+                <li class="navbar-item"><a class="nav-link" href="productsdescription.html">Продукты</a></li>
+                <li class="navbar-item"><a class="nav-link" href="basket.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <span class="badge position-absolute bg-danger rounded-pill">0</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="aboutus.html">О нас</a></li>
+            <li class="breadcrumb-item"><a href="contactus.html">Контакт</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Продукты</li>
+        </ol>
+    </nav>
+</div>
+<div class="container-fluid bg-primary p-3 mt-4 textMain">
+    <h2 class="display-3 text-center text-light ">Лучшие одежды и лучшие качества</h2>
+</div>
+<div class="container d-flex justify-content-around badgers mt-5">
+    <span class="badge bg-primary"><a href="">Джинсы</a> </span>
+    <span class="badge bg-danger"><a href="">Брюки</a> </span>
+    <span class="badge bg-dark"><a href="">Ботинки</a> </span>
+    <span class="badge bg-success"><a href="">Пальто</a> </span>
+</div>
+<div class="container mt-5 bg-light p-3 ">
+    <div class="row d-flex justify-content-around rounded-3 p-3">
+        <div class="col-sm-3  rounded  border border-primary ">
+            <span class="badge position-absolute bg-danger rounded-pill">15%</span>
+                <img src="https://free-png.ru/wp-content/uploads/2022/05/free-png.ru-747-308x340.png"
+                     width="100%" height="300px"
+                     alt="" onclick="modal()">
+                <p class="text-dark">
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+        <div class="col-sm-3  border border-primary rounded">
+            <img src="https://www.pngall.com/wp-content/uploads/5/Long-Sleeve-Shirt-PNG.png"
+                 width="100%" height="300px"
+                 alt="" onclick="modal()">
+            <p class="text-dark">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+        <div class="col-sm-3  border border-primary rounded">
+            <span class="badge position-absolute bg-danger rounded-pill">15%</span>
+            <img src="https://free-png.ru/wp-content/uploads/2022/05/free-png.ru-747-308x340.png"
+                 width="100%" height="300px"
+                 alt="" onclick="modal()">
+            <p class="text-dark">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+
+    </div>
+    <div class="row mt-5 d-flex justify-content-around">
+        <div class="col-sm-3 justify-content-center  border border-primary rounded">
+            <img src="https://free-png.ru/wp-content/uploads/2022/05/free-png.ru-747-308x340.png"
+                 width="100%" height="300px"
+                 alt="">
+            <p class="text-dark" onclick="modal()">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+        <div class="col-sm-3  border border-primary rounded">
+            <span class="badge position-absolute bg-danger rounded-pill">15%</span>
+            <img src="https://www.pngall.com/wp-content/uploads/5/Long-Sleeve-Shirt-PNG.png"
+                 width="100%" height="300px"
+                 alt="" onclick="modal()">
+            <p class="text-dark">
+                "Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+        <div class="col-sm-3  border border-primary rounded">
+            <img src="https://free-png.ru/wp-content/uploads/2022/05/free-png.ru-747-308x340.png"
+                 width="100%" height="300px"
+                 alt="" onclick="modal()">
+            <p class="text-dark">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+
+            </p>
+            <abbr class="display-6">Цена :</abbr><cite class="display-6">990 сом</cite>
+            <button type="button" class="btn btn-primary">Подробнее</button>
+        </div>
+
+    </div>
+
+</div>
+<div class="container  justify-content-center text-center">
+    <button type="button" class="btn btn-success">Cкачать фото одежд с информацией</button>
+    <div class="progress mt-4 mb-4">
+        <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+             style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="80%">25%
+        </div>
+    </div>
+</div>
+<div class="container d-flex justify-content-center">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="">Назад</a></li>
+        <li class="page-item active"><a href="" class="page-link">1</a></li>
+        <li class="page-item"><a class="page-link" href="">2</a></li>
+        <li class="page-item"><a class="page-link" href="">...</a></li>
+        <li class="page-item"><a class="page-link" href="">Далее</a></li>
+    </ul>
+</div>
+
+<script src="basketJS.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#index{
+    background: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3005243.jpg");
+}
+#main_div{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#div{
+    padding: 20px;
+    background: #0565d3;
+    overflow: hidden;
+}
+#div,#index_Form{
+    display: block;
+}
+#index_Form table td{
+    font-family: 'Rubik Marker Hatch', cursive;
+}
+#div ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 10%;
+}
+#div a{
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+}
+#div a:hover{
+    background: #7ba7e8;
+}
+#index_Form{
+    color: blue;
+    border: blue 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+#index_Form table{
+    width: 100%;
+}
+#index_Form tr td del,u{
+    text-decoration-color: #69061e;
+}
+.items,#aboutDiv{
+    width: 100%;
+    display: flex;
+}
+.items div{
+    width: 20%;
+    margin-left: 50px;
+    height: 400px;
+    border: 1px #276af8 solid;
+    border-radius:10px ;
+    margin-top: 50px;
+    overflow: hidden;
+    text-align: center;
+    color: blue;
+}
+
+.items div img{
+    width: 70%;
+    height: 70%;
+}
+.indexTable{
+    width: 90%;
+    text-align: center;
+    margin-top: 40px;
+    color: #1100ff;
+    font-size: larger;
+    font-family: "Arial Black";
+    border-collapse: collapse;
+}
+.indexTable caption{
+    font-size:xx-large;
+}
+.indexTable img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+#aboutDiv,#contackDiv{
+    margin-top: 50px;
+}
+
+#aboutDiv div{
+    display: inline;
+    width: 30%;
+    margin-left:2.5%;
+    text-align: center;
+    height: 400px;
+    border: 1px solid #2892d2;
+    border-radius:10px ;
+    color: blue;
+    font-family: 'Bebas Neue', cursive;
+}
+.indexTable tbody th, td:hover{
+    background: blue;
+    color: #06e306;
+    transition: 1s;
+
+}
+#adress{
+    width: 100%;
+    display: flex;
+}
+#adress div{
+    display: inline;
+    width: 50%;
+    color: #0f330f;
+    padding: 20px;
+    margin-top: 50px;
+
+}
+.div1{
+    border-radius: 20px;
+
+}
+#adress .div2{
+    padding-left: 80px;
+    color: blue;
+}
+#adress p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.left{
+    padding: 10px;
+    background-color: #ee1be4;
+    border-radius: 10px;
+    color: white;
+    width: 70%;
+    display: inline-block;
+    font-family:"Eras Bold ITC";
+}
+.right{
+    float: right;
+    padding: 10px;
+    background-color: #2a13fa;
+    border-radius: 10px;
+    width: 50%;
+    color: white;
+    font-family: cursive;
+}
+#contackDiv table{
+    width: 100% ;
+}
+#contackDiv table img{
+    width: 300px;
+    height: 300px;
+}
+.formContact{
+    margin-left: auto;
+    margin-right: auto;
+    width:45%;
+    margin-top: 50px;
+    border: #0e55ee 1px solid;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+.formContact input,textarea,button{
+    margin-left: 200px;
+}
+.formContact input{
+    width: 250px;
+    border:1px solid #9e9eec;
+}
+.formContact button{
+    background-color: #0e55ee;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 80%;
+}
+.formContact p{
+    margin-top: 20px;
+}
+.formContact label{
+    display: inline-block;
+}
+#main_div h1{
+    font-family: 'Rubik Microbe';
+
+}
+
+.textMain{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+.main div{
+    text-align: right;
+    border: 2px blue solid;
+}
+.row div abbr{
+    color: white;
+}
+.row div cite{
+    color :red;
+}
+.badgers a{
+    text-decoration: none;
+    color: white;
+}
+.modalshow{
+    width: 100%;
+    height: 100%;
+    background: red;
+}
